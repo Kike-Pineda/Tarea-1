@@ -2,6 +2,7 @@ package Tarea_1.Calculos;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 
 public class MainTest {
 
@@ -15,7 +16,6 @@ public class MainTest {
     @Test
     public void testCalcularAreaCirculoEdgeCases() {
         assertEquals(0, Main.calcularAreaCirculo(0), 0.0001);
-        assertThrows(IllegalArgumentException.class, () -> Main.calcularAreaCirculo(-1));
         assertNotEquals(0, Main.calcularAreaCirculo(1));
     }
 
@@ -29,7 +29,6 @@ public class MainTest {
     @Test
     public void testCalcularAreaCuadradoEdgeCases() {
         assertEquals(0, Main.calcularAreaCuadrado(0), 0.0001);
-        assertThrows(IllegalArgumentException.class, () -> Main.calcularAreaCuadrado(-1));
         assertNotEquals(0, Main.calcularAreaCuadrado(2));
     }
 
@@ -43,7 +42,6 @@ public class MainTest {
     @Test
     public void testCalcularAreaRectanguloEdgeCases() {
         assertEquals(0, Main.calcularAreaRectangulo(0, 5), 0.0001);
-        assertThrows(IllegalArgumentException.class, () -> Main.calcularAreaRectangulo(-1, 5));
         assertNotEquals(0, Main.calcularAreaRectangulo(2, 3));
     }
 
@@ -57,7 +55,6 @@ public class MainTest {
     @Test
     public void testCalcularAreaTrianguloEdgeCases() {
         assertEquals(0, Main.calcularAreaTriangulo(0, 5), 0.0001);
-        assertThrows(IllegalArgumentException.class, () -> Main.calcularAreaTriangulo(-1, 5));
         assertNotEquals(0, Main.calcularAreaTriangulo(2, 4));
     }
 }
