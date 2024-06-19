@@ -2,60 +2,114 @@ package Tarea_1.Calculos;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Test;
 
 public class MainTest {
 
     @Test
     public void testCalcularAreaCirculo() {
-        assertEquals(28.274333882308138, Main.calcularAreaCirculo(3), 0.0001);
-        assertEquals(78.53981633974483, Main.calcularAreaCirculo(5), 0.0001);
-        assertTrue(Main.calcularAreaCirculo(1) > 3);
+        double resultado1 = Main.calcularAreaCirculo(3);
+        double resultado2 = Main.calcularAreaCirculo(5);
+        double resultado3 = Main.calcularAreaCirculo(1);
+
+        System.out.println("Área del círculo (radio 3): " + resultado1);
+        System.out.println("Área del círculo (radio 5): " + resultado2);
+        System.out.println("Área del círculo (radio 1): " + resultado3);
+
+        assertEquals(28.274333882308138, resultado1, 0.0001);
+        assertEquals(78.53981633974483, resultado2, 0.0001);
+        assertTrue(resultado3 > 3);
     }
 
     @Test
-    public void testCalcularAreaCirculoEdgeCases() {
-        assertEquals(0, Main.calcularAreaCirculo(0), 0.0001);
-        assertNotEquals(0, Main.calcularAreaCirculo(1));
+    public void testCalcularAreaCirculoCasosLimite() {
+        double resultado1 = Main.calcularAreaCirculo(0);
+        double resultado2 = Main.calcularAreaCirculo(1);
+
+        System.out.println("Área del círculo (radio 0): " + resultado1);
+        System.out.println("Área del círculo (radio 1): " + resultado2);
+
+        assertEquals(0, resultado1, 0.0001);
+        assertNotEquals(0, resultado2);
     }
 
     @Test
     public void testCalcularAreaCuadrado() {
-        assertEquals(9, Main.calcularAreaCuadrado(3), 0.0001);
-        assertEquals(25, Main.calcularAreaCuadrado(5), 0.0001);
-        assertTrue(Main.calcularAreaCuadrado(1) > 0);
+        double resultado1 = Main.calcularAreaCuadrado(3);
+        double resultado2 = Main.calcularAreaCuadrado(5);
+        double resultado3 = Main.calcularAreaCuadrado(1);
+
+        System.out.println("Área del cuadrado (lado 3): " + resultado1);
+        System.out.println("Área del cuadrado (lado 5): " + resultado2);
+        System.out.println("Área del cuadrado (lado 1): " + resultado3);
+
+        assertEquals(9, resultado1, 0.0001);
+        assertEquals(25, resultado2, 0.0001);
+        assertTrue(resultado3 > 0);
     }
 
     @Test
-    public void testCalcularAreaCuadradoEdgeCases() {
-        assertEquals(0, Main.calcularAreaCuadrado(0), 0.0001);
-        assertNotEquals(0, Main.calcularAreaCuadrado(2));
+    public void testCalcularAreaCuadradoCasosLimite() {
+        double resultado1 = Main.calcularAreaCuadrado(0);
+        double resultado2 = Main.calcularAreaCuadrado(2);
+
+        System.out.println("Área del cuadrado (lado 0): " + resultado1);
+        System.out.println("Área del cuadrado (lado 2): " + resultado2);
+
+        assertEquals(0, resultado1, 0.0001);
+        assertNotEquals(0, resultado2);
     }
 
     @Test
     public void testCalcularAreaRectangulo() {
-        assertEquals(6, Main.calcularAreaRectangulo(2, 3), 0.0001);
-        assertEquals(20, Main.calcularAreaRectangulo(4, 5), 0.0001);
-        assertTrue(Main.calcularAreaRectangulo(1, 1) > 0);
+        double resultado1 = Main.calcularAreaRectangulo(2, 3);
+        double resultado2 = Main.calcularAreaRectangulo(4, 5);
+        double resultado3 = Main.calcularAreaRectangulo(1, 1);
+
+        System.out.println("Área del rectángulo (2x3): " + resultado1);
+        System.out.println("Área del rectángulo (4x5): " + resultado2);
+        System.out.println("Área del rectángulo (1x1): " + resultado3);
+
+        assertEquals(6, resultado1, 0.0001);
+        assertEquals(20, resultado2, 0.0001);
+        assertTrue(resultado3 > 0);
     }
 
     @Test
-    public void testCalcularAreaRectanguloEdgeCases() {
-        assertEquals(0, Main.calcularAreaRectangulo(0, 5), 0.0001);
-        assertNotEquals(0, Main.calcularAreaRectangulo(2, 3));
+    public void testCalcularAreaRectanguloCasosLimite() {
+        double resultado1 = Main.calcularAreaRectangulo(0, 5);
+        double resultado2 = Main.calcularAreaRectangulo(2, 3);
+
+        System.out.println("Área del rectángulo (0x5): " + resultado1);
+        System.out.println("Área del rectángulo (2x3): " + resultado2);
+
+        assertEquals(0, resultado1, 0.0001);
+        assertNotEquals(0, resultado2);
     }
 
     @Test
     public void testCalcularAreaTriangulo() {
-        assertEquals(3, Main.calcularAreaTriangulo(2, 3), 0.0001);
-        assertEquals(10, Main.calcularAreaTriangulo(4, 5), 0.0001);
-        assertTrue(Main.calcularAreaTriangulo(1, 2) > 0);
+        double resultado1 = Main.calcularAreaTriangulo(2, 3);
+        double resultado2 = Main.calcularAreaTriangulo(4, 5);
+        double resultado3 = Main.calcularAreaTriangulo(1, 2);
+
+        System.out.println("Área del triángulo (2x3): " + resultado1);
+        System.out.println("Área del triángulo (4x5): " + resultado2);
+        System.out.println("Área del triángulo (1x2): " + resultado3);
+
+        assertEquals(3, resultado1, 0.0001);
+        assertEquals(10, resultado2, 0.0001);
+        assertTrue(resultado3 > 0);
     }
 
     @Test
-    public void testCalcularAreaTrianguloEdgeCases() {
-        assertEquals(0, Main.calcularAreaTriangulo(0, 5), 0.0001);
-        assertNotEquals(0, Main.calcularAreaTriangulo(2, 4));
+    public void testCalcularAreaTrianguloCasosLimite() {
+        double resultado1 = Main.calcularAreaTriangulo(0, 5);
+        double resultado2 = Main.calcularAreaTriangulo(2, 4);
+
+        System.out.println("Área del triángulo (0x5): " + resultado1);
+        System.out.println("Área del triángulo (2x4): " + resultado2);
+
+        assertEquals(0, resultado1, 0.0001);
+        assertNotEquals(0, resultado2);
     }
 }
-
